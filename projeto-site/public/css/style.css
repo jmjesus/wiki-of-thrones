@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: GOT;
+    src: url(GameOfThrones.ttf);
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li .a2,.a3,.a4{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 25px 16px 7px;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+    font-family: GOT;
+}
+
+.a5,.a6{
+    display: block;
+    color: white;
+    background-color:#008CBA;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 3px 0px;
+    /* box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) */;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.a5:hover, .a6:hover{
+    background-color: white;
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.menu li .a2:hover, .a3:hover, .a4:hover {
+    border-bottom: 3px solid #008CBA;
+    font-family: GOT;
+}
+
+.cabecalho {
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    width: 100vw;
+    background-size: 100%, 100%;
+    background-image: url("../img/teste2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.texto-cabecalho {
+    padding: 4vh;
+    font-family: GOT;
+}
+
+.corpo-site {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/backgroundkingslanding2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-size: cover;
+}
+
+.box-sinopse {
+    position: absolute;
+    width: 50vw;
+    height: 50%;
+    top: 60vh;
+    left: 10vw;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 230, 0.7);
+}
+
+.texto-sinopse, .texto-sinopse2 {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texto-sinopse2 {
+    padding: 5px;
+}
+
+.box-curiosidades {
+    position: absolute;
+    width: 20vw;
+    height: 60%;
+    top: 60vh;
+    left: 70vw;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 230, 0.7);
+}
+
+.texto-curiosidades {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.li-saibamais {
+    list-style-type: none;
+    padding-top: 2vh;
+}
+
+.link-saibamais {
+    text-align: center;
+    text-decoration: none;
+    /* margin-left: 25%; */
+    /* padding-top: 3px; */
+    font-size: 1.25em;
+}

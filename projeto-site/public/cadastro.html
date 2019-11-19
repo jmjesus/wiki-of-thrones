@@ -1,72 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página com exemplo de Cadastro de usuário</title>
-
+    <title>Wiki Of Thrones</title>
+    <link rel="stylesheet" href="./css/style-cadastro.css">
+    <link rel="icon" type="imagem/png" href="./img/favicon.ico" />
+    
 </head>
-
 <body>
+    
+    <nav>
+        <ul class="menu">
+            <li><a class="a1" href="./index.html"><img src="./img/logo3.png" alt="logo trono de ferro"></a></li>
+            <li><a class="a2" href="./index.html">HOME</a></li>
+            <li><a class="a3" href="#">CASAS</a></li>
+            <li><a class="a4" href="#">REINOS</a></li>
+            <li style="float: right"><a class="a5" href="#">LOGIN</a></li>
+            <li style="float: right"><a class="a6" href="./cadastro.html">CADASTRO</a></li>
+        </ul>
+    </nav>
 
-    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-        Nome: <input type="text" name="nome" required minlength="4">
-        <br>
-        Usuário: <input type="text" name="login" required minlength="4">
-        <br>
-        Senha: <input type="password" name="senha" required minlength="4">
-        <br>
-        <button id="btn_entrar">Cadastrar</button>
-    </form>
-    
-    <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
-    
-    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-        Erro no cadastro
+    <div class="cabecalho">
+        <h1 class="texto-cabecalho">
+        WIKI OF THRONES
+        </h1>
     </div>
+    
+    <div class="corpo-site">
+        
+        <div class="box-cadastro">
+            <form class="form-cadastro" action="/action_page.php">
+                <div class="labels"><label for="nome">Nome</label></div>
+                <div class="inputs"><input type="text" id="nome" name="firstname" placeholder="Seu Nome"></div>
+                <div class="labels"><label for="email">Email</label></div>
+                <div class="inputs"><input type="text" id="email" name="email" placeholder="Seu Email"></div>
+                <div class="labels"><label for="senha">Senha</label></div>
+                <div class="inputs"><input type="password" id="senha" name="senha" placeholder="Senha"></div>
+                
+                <div class="labels"><label class="casa-form" for="casa">Casa</label></div>
+                <div class="inputs"><select id="casa" name="casa">
+                      <option value="Stark">Stark</option>
+                      <option value="Lannister">Lannister</option>
+                      <option value="Lannister">Targaryen</option>
+                      <option value="Baratheon">Baratheon</option>
+                      <option value="Greyjoy">Greyjoy</option>
+                      <option value="Arryn">Arryn</option>
+                      <option value="Tyrell">Tyrell</option>
+                      <option value="Tully">Tully</option>
+                      <option value="Martell">Martell</option>
+                </select></div>
+                  
+                <input type="submit" value="Cadastre-se">
 
+                <div class="ja_cadastrado">Já é cadastrado?<a href=""> Entre agora</a></div>
+
+            </form>
+        </div>
+    
+    </div>
 </body>
-
 </html>
-<script>
-
-    function cadastrar() {
-        aguardar();
-        var formulario = new URLSearchParams(new FormData(form_cadastro));
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            body: formulario
-        }).then(function (response) {
-            
-            if (response.ok) {
-
-                window.location.href='login.html';
-
-            } else {
-
-                console.log('Erro de cadastro!');
-                response.text().then(function (resposta) {
-                    div_erro.innerHTML = resposta;
-                });
-                finalizar_aguardar();
-            }
-        });
-
-        return false;
-    }
-
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
-    }
-
-    function finalizar_aguardar() {
-        btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
-    }
-
-</script>

@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: GOT;
+    src: url(GameOfThrones.ttf);
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li .a2,.a3,.a4{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 25px 16px 7px;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+    font-family: GOT;
+}
+
+.a5,.a6{
+    display: block;
+    color: white;
+    background-color:#008CBA;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 3px 0px;
+    /* box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) */;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.a5:hover, .a6:hover{
+    background-color: white;
+    color: black; 
+    border: 2px solid #008CBA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu li .a2:hover, .a3:hover, .a4:hover {
+    border-bottom: 3px solid #008CBA;
+    font-family: GOT;
+}
+
+.cabecalho {
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    width: 100vw;
+    background-size: 100%, 100%;
+    background-image: url("../img/teste2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.texto-cabecalho {
+    padding: 4vh;
+    font-family: GOT;
+}
+
+.corpo-site {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/mapagot.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-size: cover;
+}
+
+.box-cadastro {
+    position: absolute;
+    width: 50vw;
+    height: 80%;
+    top: 40vh;
+    left: 25vw;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 230, 0.350);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PARTE DO FORM - FALTA EDITAR DAQUI PRA BAIXO */
+.form-cadastro {
+position: relative;
+top: 15%;
+}
+
+input[type=text], input[type=password], select {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* TENTANDO ARRUMAR AS LABELS */
+
+/* label { 
+    float:left;
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+} */
+
+.labels {
+    float: left;
+    width: 25%;
+    margin-top: 25px;
+    font-family: GOT;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.inputs {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+label {
+    margin-left: 45px;
+}
+
+/* BOTÃO CADASTRAR */
+
+input[type=submit] {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 35px;
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(1, 111, 148);
+}
+
+.ja_cadastrado {
+    position: relative;
+    top: 100px;
+    right: 160px;
+}
+
+/* .ja_cadastrado { 
+    float: left;
+    margin-top: 100px;
+    margin-left: -140px;
+}*/
