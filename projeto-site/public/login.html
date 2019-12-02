@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiki Of Thrones</title>
+    <link rel="stylesheet" href="./css/style-login.css">
+    <link rel="icon" type="imagem/png" href="./img/favicon.ico" />
+    
+</head>
+<body>
+    
+    <nav>
+        <ul class="menu">
+            <li><a class="a1" href="./index.html"><img src="./img/logo3.png" alt="logo trono de ferro"></a></li>
+            <li><a class="a2" href="./index.html">HOME</a></li>
+            <li><a class="a3" href="#">CASAS</a></li>
+            <li><a class="a4" href="#">REINOS</a></li>
+            <li style="float: right"><a class="a5" href="./login.html">LOGIN</a></li>
+            <li style="float: right"><a class="a6" href="./cadastro.html">CADASTRO</a></li>
+        </ul>
+    </nav>
+
+    <div class="cabecalho">
+        <h1 class="texto-cabecalho">
+        WIKI OF THRONES
+        </h1>
+    </div>
+    
+    <div class="corpo-site">
+        
+        <div class="box-cadastro">
+            <form class="form-cadastro" id="form_login" method="post" onsubmit="return entrar()">
+                <div class="labels"><label for="login">Email</label></div>
+                <div class="inputs"><input type="text" name="login" placeholder="Seu Email"></div>
+                <div class="labels"><label for="senha">Senha</label></div>
+                <div class="inputs"><input type="password" name="senha" placeholder="Senha" required minlength="4" required maxlength="16"></div>
+                  
+                <input id="btn_entrar" type="submit" value="Entre">
+
+                <div class="nao_cadastrado">Ainda não tem uma conta?<a href="./cadastro.html"> Cadastre-se agora</a></div>
+
+            </form>
+        </div>
+    
+    </div>
+</body>
+</html>
+<script>
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    
+                    window.location.href = 'index2.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                    
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+    }
+
+</script>

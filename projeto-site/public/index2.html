@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiki Of Thrones</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="imagem/png" href="./img/favicon.ico" />
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+<body>
+    
+    <nav>
+        <ul class="menu">
+            <li><a class="a1" href="#"><img src="./img/logo3.png" alt="logo trono de ferro"></a></li>
+            <li><a class="a2" href="./index.html">HOME</a></li>
+            <li><a class="a3" href="./casas.html">CASAS</a></li>
+            <li><a class="a4" href="./reinos.html">REINOS</a></li>
+            <li class="usuario" style="float: right"><span class="usuario2">Bem Vindo, <b id="b_usuario"></b></span><a class="sair" href="#" onclick="logoff()"> SAIR</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="cabecalho">
+        <h1 class="texto-cabecalho">
+        WIKI OF THRONES
+        </h1>
+    </div>
+
+    
+    <div class="corpo-site">
+        <div class="box-sinopse">
+            <p class="texto-sinopse">Situada nos continentes fictícios de Westeros e Essos, a série 
+            centra-se no Trono de Ferro dos Sete Reinos e segue um enredo de alianças
+            e conflitos entre as famílias nobres dinásticas, seja competindo para reivindicar
+            o trono ou lutando por sua independência. <p class="texto-sinopse2">Game of Thrones é uma série de televisão norte-americana
+            criada por David Benioff e D. B. Weiss, e baseada na série de livros A Song of Ice and Fire, de 
+            George R. R. Martin. Game of Thrones é filmada no Canadá, na Croácia, na Islândia, em Malta,
+            em Marrocos, na Espanha, na Irlanda do Norte, na Escócia e nos Estados Unidos. A primeira temporada
+            da série estreou em 17 de abril de 2011, na HBO, nos Estados Unidos, e a oitava e última temporada estreou
+            em 14 de abril de 2019, e terminou em 19 de maio de 2019.</p></p>
+        </div>
+
+        <div class="box-curiosidades">
+            <ul class="texto-curiosidades">
+                <li>Que o nome do avô de Ned Stark é Edwyle Stark?</li>
+                <li>Que Arya Stark é a única personagem com capítulos em todos os livros?</li>
+                <li>Que o famoso martelo de guerra de Robert Baratheon foi feito por Donal Noye?</li>
+                <li>Que o nome de Meistre Aemon foi escolhido por seu avô Rei Daeron Targaryen?</li>
+                <li>Que Tyrion Lannister tinha 13 ou 14 anos quando casou-se com Tysha?</li>
+                <li class="li-saibamais"><a class="link-saibamais" href="">Saiba Mais</a></li>
+            </ul> 
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+let usuario;
+
+verificar_autenticacao();
+</script>

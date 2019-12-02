@@ -161,9 +161,11 @@ input[type=submit]:hover {
 }
 
 .ja_cadastrado {
-    position: relative;
-    top: 100px;
-    right: 160px;
+    position: absolute;
+    top: 350px;
+    /* right: 250px; */
+    margin-left: 35%;
+
 }
 
 /* .ja_cadastrado { 

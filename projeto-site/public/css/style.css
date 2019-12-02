@@ -21,7 +21,7 @@ body {
     float: left;
 }
 
-.menu li .a2,.a3,.a4{
+.menu li .a2,.a3,.a4, .usuario{
     display: block;
     color: black;
     text-align: center;
@@ -29,6 +29,25 @@ body {
     text-decoration: none;
     border-bottom: 3px solid white;
     font-family: GOT;
+}
+
+#b_usuario{
+    color: #008CBA;
+}
+
+.usuario2{
+    margin-right: 30px;
+}
+
+.sair{
+    text-decoration: none;
+    color: black;
+}
+
+.sair:hover{
+    text-decoration: none;
+    color: #008CBA;
+    border-bottom: 3px solid #008CBA;
 }
 
 .a5,.a6{
